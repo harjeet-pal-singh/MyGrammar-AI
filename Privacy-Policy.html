@@ -1,228 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy | MyGrammar AI</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - MyGrammar AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <style>
-        :root {
-            --primary-green: #1f7a4d;
-            --secondary-green: #2ea36a;
-            --light-green: #e9f7f0;
-            --text-dark: #1f2933;
-            --border-color: #cfe9db;
-        }
+    :root {
+      --green: #01ad49;
+      --green-dark: #018a3a;
+      --green-light: #e6f9ee;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f6faf7;
+    }
 
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                         Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--light-green);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        }
+    header {
+      background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+      color: #fff;
+      padding: 3.5rem 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 50%;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 160px; height: 160px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 50%;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
 
-        h1 {
-            color: var(--primary-green);
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    main {
+      max-width: 820px;
+      margin: 2.5rem auto;
+      padding: 0 1.25rem 3rem;
+    }
 
-        .effective-date {
-            text-align: center;
-            color: #555;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
+    .toc {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--green);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .toc h2 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      border: none;
+      padding: 0;
+    }
+    .toc ol {
+      margin: 0; padding-left: 1.25rem;
+    }
+    .toc li { margin-bottom: 0.3rem; }
+    .toc a {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+    .toc a:hover { text-decoration: underline; }
 
-        h2 {
-            color: var(--primary-green);
-            margin-top: 40px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 6px;
-        }
+    section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.25rem;
+      transition: box-shadow 0.2s;
+    }
+    section:hover { box-shadow: 0 4px 16px rgba(1,173,73,0.08); }
 
-        h3 {
-            color: var(--secondary-green);
-            margin-top: 25px;
-        }
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.35rem;
+      font-weight: 400;
+      color: var(--green-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    h2 .num {
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-        p {
-            margin: 12px 0;
-        }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.25rem 0 0.5rem;
+    }
 
-        ul {
-            margin: 10px 0 10px 20px;
-        }
+    p { margin-bottom: 0.85rem; color: #374151; }
+    p:last-child { margin-bottom: 0; }
 
-        li {
-            margin-bottom: 6px;
-        }
+    ul, ol {
+      padding-left: 1.4rem;
+      margin-bottom: 0.85rem;
+    }
+    li { margin-bottom: 0.4rem; color: #374151; }
 
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 14px;
-            color: #555;
-        }
+    .highlight {
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+      border-radius: 6px;
+      padding: 0.85rem 1rem;
+      margin: 1rem 0;
+      font-size: 0.93rem;
+      color: #065f2e;
+    }
 
-        a {
-            color: var(--secondary-green);
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .contact-card {
+      background: linear-gradient(135deg, var(--green-light), #fff);
+      border: 1px solid #bbf0d4;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1rem;
+    }
+    .contact-card a {
+      color: var(--green-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .contact-card a:hover { text-decoration: underline; }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .agreement {
+      background: var(--text);
+      color: #e5e7eb;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: center;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                margin: 20px;
-                padding: 25px;
-            }
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer strong { color: var(--green-dark); }
+
+    a { color: var(--green-dark); }
+
+    @media (max-width: 600px) {
+      section { padding: 1.25rem 1.25rem; }
+      .toc { padding: 1.25rem; }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+  <header>
     <h1>Privacy Policy</h1>
-    <div class="effective-date">Effective Date: January 4, 2026</div>
+    <p>My Grammar AI &nbsp;·&nbsp;  &nbsp;·&nbsp; Last Updated: May 2026</p>
+  </header>
 
-    <p>
-        MyGrammar AI ("we," "us," or "our") is committed to protecting your privacy.
-        This Privacy Policy explains how we collect, use, store, and protect your
-        information when you use the MyGrammar AI mobile application (the "App").
-    </p>
+  <main>
 
-    <p>
-        By accessing or using the App, you agree to this Privacy Policy.
-        <strong>If you do not agree, please do not use the App.</strong>
-    </p>
-
-    <h2>1. Information We Collect</h2>
-
-    <h3>1.1 Personal Information</h3>
-    <p>
-        We collect your email address solely for OTP-based authentication,
-        account access, and essential service-related communication.
-        We do not collect names, phone numbers, physical addresses,
-        or demographic information.
-    </p>
-
-    <h3>1.2 Text Input and Grammar Data</h3>
-    <p>
-        Text entered for grammar or writing assistance is processed to generate
-        corrections and suggestions. Text is not stored by default.
-        Grammar results are saved only if you explicitly choose to save them.
-        Unsaved content is automatically discarded.
-    </p>
-
-    <h3>1.3 Usage Information</h3>
-    <p>
-        We may collect limited usage-related information such as the number
-        and frequency of grammar checks. This information is used only to
-        enforce usage limits and ensure proper app functionality.
-    </p>
-
-    <h3>1.4 Device and Technical Information</h3>
-    <p>
-        We may automatically collect limited technical information such as
-        device type, operating system version, and app version. This data is
-        used solely to improve performance and fix technical issues.
-        It does not personally identify you.
-    </p>
-
-    <h2>2. How We Use Your Information</h2>
-    <ul>
-        <li>Authenticate users using secure email OTP login</li>
-        <li>Provide grammar and writing assistance features</li>
-        <li>Display saved grammar history when enabled</li>
-        <li>Enforce usage limits</li>
-        <li>Improve performance, reliability, and security</li>
-        <li>Send important service-related updates</li>
-    </ul>
-
-    <p>
-        We do not use your information for advertising, marketing profiling,
-        or behavioral tracking.
-    </p>
-
-    <h2>3. Information Sharing and Disclosure</h2>
-    <p>
-        Information may be shared only with trusted service providers,
-        when legally required, or during business transfers under the
-        same privacy protections.
-    </p>
-
-    <h2>4. Data Storage and Security</h2>
-    <p>
-        We use reasonable technical and organizational safeguards to protect
-        your data. However, no system can guarantee absolute security.
-    </p>
-
-    <h2>5. Data Retention</h2>
-    <p>
-        Saved grammar corrections remain available until manually removed.
-        Unsaved text is not retained. Account deletion features may be
-        added in future updates.
-    </p>
-
-    <h2>6. Your Choices and Controls</h2>
-    <ul>
-        <li>Choose whether to save grammar corrections</li>
-        <li>Stop using the App at any time</li>
-        <li>Contact us for data-related questions</li>
-    </ul>
-
-    <h2>7. Children’s Privacy</h2>
-    <p>
-        MyGrammar AI does not knowingly collect personal information from
-        children under the age of 13. If such information is discovered,
-        we will take reasonable steps to delete it.
-    </p>
-
-    <h2>8. Third-Party Services</h2>
-    <p>
-        The App may use third-party services for hosting, authentication,
-        or grammar processing. These providers are required to follow
-        appropriate data protection standards.
-    </p>
-
-    <h2>9. Changes to This Privacy Policy</h2>
-    <p>
-        We may update this Privacy Policy from time to time. Updates will be
-        posted within the App or on associated platform pages.
-        Continued use of the App indicates acceptance of the updated policy.
-    </p>
-
-    <h2>10. Contact Us</h2>
-    <p>
-        If you have questions or concerns about this Privacy Policy, contact us at:
-        <br><strong>Email:</strong> <a href="mailto:mygrammarai@gmail.com">
-       mygrammarai@gmail.com</a>
-    </p>
-
-    <div class="footer">
-        © 2026 MyGrammar AI. All rights reserved.
+    <div class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#collect">Information We Collect</a></li>
+        <li><a href="#use">How We Use Your Information</a></li>
+        <li><a href="#share">Information Sharing and Disclosure</a></li>
+        <li><a href="#security">Data Storage and Security</a></li>
+        <li><a href="#retention">Data Retention</a></li>
+        <li><a href="#choices">Your Choices and Controls</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#third-party">Third-Party Services</a></li>
+        <li><a href="#changes">Changes to This Privacy Policy</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
     </div>
-</div>
+
+    <section id="intro">
+      <h2><span class="num">1</span> Introduction</h2>
+      <p>MyGrammar AI ("we," "us," or "our") is committed to protecting the privacy of our users ("you" or "your"). This Privacy Policy explains how we collect, use, store, and safeguard your information when you use our mobile application, MyGrammar AI (the "App").</p>
+      <p>We respect your privacy and are transparent about our practices. By accessing or using the App, you agree to the terms described in this Privacy Policy.</p>
+      <div class="highlight">
+        If you do not agree with this Privacy Policy, please do not use the App.
+      </div>
+    </section>
+
+    <section id="collect">
+      <h2><span class="num">2</span> Information We Collect</h2>
+
+      <h3>Personal Information</h3>
+      <p>When you use MyGrammar AI, we collect only the minimum personal information necessary to provide our services. Authentication is handled through a <strong>third-party sign-in provider</strong>. When you sign in, we receive your <strong>email address</strong> and <strong>display name</strong> solely to identify your account and provide access to the App. We do not store your password or any other sensitive credential.</p>
+
+    
+      <h3>Usage Information</h3>
+      <p>We may collect limited usage-related information to ensure proper functioning of the App. This data is used only for operational purposes.</p>
+
+      <h3>Device Information</h3>
+      <p>We may automatically collect basic device-related information such as device type, operating system version, and app version. This information helps us maintain compatibility, improve performance, and fix bugs. We do not use this information to identify you personally.</p>
+    </section>
+
+    <section id="use">
+      <h2><span class="num">3</span> How We Use Your Information</h2>
+      <ul>
+        <li>To authenticate users securely via a third-party sign-in provider</li>
+        <li>To maintain, improve, and optimize app performance and stability</li>
+        <li>To communicate important service-related updates, such as security or feature changes</li>
+      </ul>
+     
+    </section>
+
+    <section id="share">
+      <h2><span class="num">4</span> Information Sharing and Disclosure</h2>
+      <p>We do not sell, trade, or rent your personal information to third parties.</p>
+      <p>We may share limited information only in the following situations:</p>
+      <ul>
+        <li>With trusted service providers (such as backend hosting or Google authentication services) strictly for app functionality</li>
+        <li>When required by law, regulation, or valid legal process</li>
+        <li>To protect the rights, safety, or security of users, the App, or the public</li>
+      </ul>
+      <p>In the event of a merger, acquisition, or transfer of assets, user information may be transferred as part of the business assets, subject to the same privacy protections.</p>
+    </section>
+
+    <section id="security">
+      <h2><span class="num">5</span> Data Storage and Security</h2>
+      <p>We implement reasonable technical and organizational measures to protect your information from unauthorized access, misuse, alteration, or disclosure. Authentication is delegated to a secure third-party identity provider using industry-standard protocols, and we do not store any passwords on our servers. While we strive to use commercially acceptable means to protect your data, no digital system is completely secure, and we cannot guarantee absolute security.</p>
+    </section>
+
+    <section id="retention">
+      <h2><span class="num">6</span> Data Retention</h2>
+      <p>Saved grammar corrections remain available in your history until you manually remove them, or until account management features (such as account deletion) are introduced in future updates.</p>
+      <div class="highlight">
+        Currently, in-app account deletion and data removal features are not yet available, but are planned for a future release.
+      </div>
+    </section>
+
+    <section id="choices">
+      <h2><span class="num">7</span> Your Choices and Controls</h2>
+      <ul>
+        <li>You may choose whether or not to save grammar corrections</li>
+        <li>You may revoke My Grammar AI's access to your account at any time via your sign-in provider's account settings</li>
+        <li>You may stop using the App at any time</li>
+        <li>You may contact us to request clarification about stored data</li>
+      </ul>
+      <p>In-app options to delete accounts or update account information are not currently available but may be added in future versions.</p>
+    </section>
+
+    <section id="children">
+      <h2><span class="num">8</span> Children's Privacy</h2>
+      <p>MyGrammar AI is intended for general users and students. We do not knowingly collect personal information from children under the age of 13. If we become aware that such information has been collected, we will take reasonable steps to delete it promptly.</p>
+    </section>
+
+    <section id="third-party">
+      <h2><span class="num">9</span> Third-Party Services</h2>
+      <p>The App uses a <strong>third-party authentication provider</strong> to handle sign-in securely. By signing in through this provider, you are also subject to their respective privacy policy. We encourage you to review your sign-in provider's privacy practices independently.</p>
+      <p>The App may also rely on other third-party services for essential functionality such as backend hosting or grammar processing. These services are used only to operate the App and are required to follow appropriate data protection standards.</p>
+    </section>
+
+    <section id="changes">
+      <h2><span class="num">10</span> Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in features, legal requirements, or operational practices. Any updates will be posted within the App or on associated platform pages. Continued use of the App after changes are posted indicates acceptance of the revised policy.</p>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">11</span> Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please reach out to us:</p>
+      <div class="contact-card">
+        <p><strong>My Grammar AI Support</strong></p>
+        <p>Email: <a href="mailto:mygrammarai@gmail.com">mygrammarai@gmail.com</a></p>
+      </div>
+    </section>
+
+    <div class="agreement">
+      By using My Grammar AI, you acknowledge that you have read, understood, and agreed to this Privacy Policy.
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 <strong>My Grammar AI</strong>. All rights reserved.
+  </footer>
 
 </body>
 </html>
-
-
